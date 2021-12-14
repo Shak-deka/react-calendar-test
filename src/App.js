@@ -1,25 +1,27 @@
-import logo from './logo.svg';
+import React from 'react';
+import { BrowserRouter, Route } from 'react-router-dom';
 import './App.css';
+import About from './components/about/about';
+import MyCalendar from './components/calendar/calendar';
+import Event from './components/event';
+import NavbarMenu from './components/navbar/Navbar';
 
-function App() {
+import "react-big-calendar/lib/css/react-big-calendar.css";
+
+
+const App = (props) => {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+    <BrowserRouter>
+      <div>
+        <NavbarMenu/>
+        <div>
+          <Route path='/about' component={About}/>
+          <Route path='/calendar' component={MyCalendar}/>
+          <Route path='/event' component={Event}/>
+        </div>
+      </div>
+    </BrowserRouter>
+  )
 }
 
 export default App;
