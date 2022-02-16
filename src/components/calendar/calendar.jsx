@@ -10,8 +10,14 @@ import moment from 'moment'
 //     )
 // }
 
+moment.locale('ru', {
+  week: {
+    dow: 1,
+  }
+});
 
 const localizer = momentLocalizer(moment)
+// console.log({localizer});
 
 const MyCalendar = props => (
   <div>
