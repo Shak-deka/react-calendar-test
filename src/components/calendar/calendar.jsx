@@ -10,6 +10,11 @@ import moment from 'moment'
 //     )
 // }
 
+moment.locale('ru', {
+  week: {
+    dow: 1,
+  }
+});
 
 const localizer = momentLocalizer(moment)
 
