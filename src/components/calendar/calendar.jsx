@@ -17,7 +17,6 @@ moment.locale('ru', {
 });
 
 const localizer = momentLocalizer(moment)
-// console.log({localizer});
 
 const MyCalendar = props => (
   <div>
